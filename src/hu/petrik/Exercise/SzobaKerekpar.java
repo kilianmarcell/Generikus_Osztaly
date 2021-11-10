@@ -44,7 +44,7 @@ public class SzobaKerekpar {
             Set<Integer> unio = feleseg.unio(ferj);
 
         System.out.println(String.format("%d napon használják a biciklit!", unio.getSize()));
-        System.out.println(String.format("%.2f százalékos a szobakerékpár kihasználtsága.", unio.getSize() / 31.0 * 100));
+        System.out.println(String.format("%.2f%% a szobakerékpár kihasználtsága.", unio.getSize() / 31.0 * 100));
 
     }
 
