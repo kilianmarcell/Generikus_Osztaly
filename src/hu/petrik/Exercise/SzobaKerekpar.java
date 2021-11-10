@@ -4,12 +4,12 @@ import hu.petrik.Set.Set;
 
 public class SzobaKerekpar {
 
-    private Set<Integer> feleseg;
-    private Set<Integer> ferj;
+    private static Set<Integer> feleseg;
+    private static Set<Integer> ferj;
 
-    public SzobaKerekpar() {
+    public static void Run() {
 
-        this.feleseg = new Set<>();
+        feleseg = new Set<>();
 
             feleseg.add(1);
             feleseg.add(3);
@@ -27,7 +27,7 @@ public class SzobaKerekpar {
             feleseg.add(24);
             feleseg.add(27);
 
-        this.ferj = new Set<>();
+        ferj = new Set<>();
 
             ferj.add(7);
             ferj.add(13);
@@ -40,6 +40,11 @@ public class SzobaKerekpar {
             ferj.add(25);
             ferj.add(29);
             ferj.add(30);
+
+            Set<Integer> unio = feleseg.unio(ferj);
+
+        System.out.println(String.format("%d napon használják a biciklit!", unio.getSize()));
+        System.out.println(String.format("%.2f százalékos a szobakerékpár kihasználtsága.", unio.getSize() / 31.0 * 100));
 
     }
 
